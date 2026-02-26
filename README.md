@@ -88,15 +88,3 @@ export PYTHONPATH=$PYTHONPATH:$(pwd)/src
 pytest tests/
 
 ```
-
-````
-
-### Your Final Step!
-Once you save that file, just run your Git commands one last time to send it to GitHub:
-
-```bash
-git add README.md
-git commit -m "docs: add complete README with instructions"
-git push
-
-````
