@@ -1,0 +1,30 @@
+-- PostgreSQL Data Seed --
+CREATE TABLE customers (
+id SERIAL PRIMARY KEY,
+name VARCHAR(100),
+country VARCHAR(50)
+)                          ;
+
+CREATE TABLE orders (
+id SERIAL PRIMARY KEY,
+customer_id INT REFERENCES customers(id),
+product VARCHAR(100),
+quantity INT,
+price NUMERIC
+)                                         ;
+
+INSERT INTO customers (name, country) VALUES
+('Alice Martin', 'France'),
+('Omar Hassan', 'Morocco'),
+('John Carter', 'USA'),
+('Sara Benali', 'Morocco'),
+('Lucas Dubois', 'France'),
+('Nadia El Amrani', 'Morocco');
+
+INSERT INTO orders (customer_id, product, quantity, price) VALUES
+(1, 'Laptop', 2, 1200),
+(2, 'Mouse', 10, 25),
+(3, 'Monitor', 3, 300),
+(4, 'Keyboard', 5, 70),
+(5, 'Laptop', 1, 1300),
+(6, 'Monitor', 2, 290)                                            ;

@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16-bookworm
+    restart: always
+    environment:
+      POSTGRES_USER: ahmed
+      POSTGRES_PASSWORD: 1234567890
+      POSTGRES_DB: sales_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
