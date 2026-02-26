@@ -1,0 +1,30 @@
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# Environment Variables (Keep .env.example, ignore .env)
+.env
+.env.shared
+.env.test
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Test/Coverage logs
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.log
